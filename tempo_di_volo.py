@@ -9,10 +9,11 @@ if n_carburante < 0 :
 elif n_consumo_orario < 0 :
 	print("Il consumo orario deve essere maggiore di zero!")
 else:
-
-	ora = n_carburante/n_consumo_orario
- 	minuti = n_carburante/(n_consumo_orario/60)
-	secondi = n_carburante/(n_consumo_orario/3600)
+	tempo = n_carburante / n_consumo_orario
+	ora = int (tempo)
+ 	minuti = ((n_carburante/n_consumo_orario) - ora)*60
+	int (minuti)
+	secondi = ((n_carburante/n_consumo_orario)- minuti)*3600
 
 	print ora
 	print minuti
