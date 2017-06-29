@@ -11,12 +11,13 @@ elif n_consumo_orario < 0 :
 else:
 	tempo = n_carburante / n_consumo_orario
 	ora = int (tempo)
- 	minuti = ((n_carburante/n_consumo_orario) - ora)*60
-	int (minuti)
-	secondi = ((n_carburante/n_consumo_orario)- minuti)*3600
 
-	print ora
-	print minuti
-	print secondi
+ 	minuti = ((n_carburante/n_consumo_orario) - ora)*60
+	minuti_int = int (minuti)
+
+	secondi = (minuti - minuti_int )*60
+	secondi_int = int (secondi)
+	
+	print "il tempo di volo e' di h:", ora, " min:", minuti_int, "sec:", secondi_int
 
 
